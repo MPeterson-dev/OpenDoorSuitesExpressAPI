@@ -1,0 +1,82 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Dec 05, 2024 at 12:39 AM
+-- Server version: 5.7.24
+-- PHP Version: 8.1.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `tenantsdb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tenantstable`
+--
+
+CREATE TABLE `tenantstable` (
+  `tenantId` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `profession` varchar(255) DEFAULT NULL,
+  `description` text,
+  `phone` varchar(15) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `suite` varchar(50) DEFAULT NULL,
+  `serviceOne` varchar(255) DEFAULT NULL,
+  `serviceTwo` varchar(255) DEFAULT NULL,
+  `serviceThree` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tenantstable`
+--
+
+INSERT INTO `tenantstable` (`tenantId`, `name`, `profession`, `description`, `phone`, `image`, `suite`, `serviceOne`, `serviceTwo`, `serviceThree`) VALUES
+(1, 'Lisa Johnson', 'Hair Stylist', 'Specializes in trendy haircuts, coloring, and styling for all occasions.', '555-123-4567', 'https://picsum.photos/200/300?random=1', 'A102', 'Haircut', 'Coloring', 'Styling'),
+(2, 'Tom Brown', 'Barber', 'Experienced barber offering classic and modern haircuts for men.', '555-987-6543', 'tom_brown.jpg', 'B202', 'Men’s Haircut', 'Beard Trimming', 'Hot Towel Shave'),
+(3, 'Emily Davis', 'Nail Technician', 'Creative nail artist specializing in manicures, pedicures, and custom nail designs.', '555-654-3210', 'emily_davis.jpg', 'C303', 'Manicure', 'Pedicure', 'Nail Art'),
+(4, 'James Wilson', 'Massage Therapist', 'Certified massage therapist focused on relaxation and therapeutic treatments.', '555-321-4567', 'james_wilson.jpg', 'D404', 'Swedish Massage', 'Deep Tissue Massage', 'Hot Stone Therapy'),
+(5, 'Sophia Taylor', 'Makeup Artist', 'Professional makeup artist specializing in bridal and event makeup.', '555-789-1234', 'sophia_taylor.jpg', 'E505', 'Bridal Makeup', 'Event Makeup', 'Makeup Lessons'),
+(6, 'Michael Lee', 'Hair Stylist', 'Expert in haircuts, highlights, and keratin treatments.', '555-654-9876', 'michael_lee.jpg', 'F606', 'Haircut', 'Highlights', 'Keratin Treatment'),
+(7, 'Olivia White', 'Nail Technician', 'Offers luxurious nail care services, including gel nails and acrylic extensions.', '555-321-7890', 'olivia_white.jpg', 'G707', 'Gel Nails', 'Acrylic Extensions', 'Nail Art'),
+(8, 'Ethan Green', 'Barber', 'Professional barber skilled in fades, shaves, and beard grooming.', '555-987-1230', 'ethan_green.jpg', 'H808', 'Fade Haircuts', 'Shaves', 'Beard Grooming'),
+(9, 'Ava Martinez', 'Esthetician', 'Skincare expert providing facials, waxing, and exfoliation treatments.', '555-123-9876', 'ava_martinez.jpg', 'I909', 'Facials', 'Waxing', 'Exfoliation'),
+(11, 'John Doe', 'Barber', 'Barber', '(123)456-7890', 'https://picsum.photos/200/300?random=1', 'G605', 'Haircut', 'Shave', 'Edging');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tenantstable`
+--
+ALTER TABLE `tenantstable`
+  ADD PRIMARY KEY (`tenantId`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tenantstable`
+--
+ALTER TABLE `tenantstable`
+  MODIFY `tenantId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
